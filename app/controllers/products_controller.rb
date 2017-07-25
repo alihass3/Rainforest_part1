@@ -1,4 +1,4 @@
-class ProductController < ApplicationController
+class ProductsController < ApplicationController
 
   def index
     @products=Product.all
@@ -22,11 +22,12 @@ class ProductController < ApplicationController
 
     if @products.save
       # if the picture gets saved, generate a get request to "/pictures" (the index)
-      redirect_to "/products"
+      redirect_to "/products" #would take it to show page of index
     else
       # otherwise render new.html.erb
       render :new
     end
+    
   end
 
 
