@@ -1,6 +1,7 @@
 
 <p><%= @product.name %>, <%= @product.description %>, <%= @product.price %></p>
 
+<%= link_to(button_tag("Edit product"), edit_product_path(@product.id)) %>
 <button type="button">Edit Product</button>
 
 
